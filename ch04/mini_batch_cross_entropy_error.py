@@ -32,9 +32,4 @@ def cross_entropy_error(y, t):
         y = y.reshape(1, y.size)
     delta = 1e-7
     batch_size = y.shape[0]
-<<<<<<< HEAD
-    return -np.sum(np.log(y[np.arange(batch_size), t]) + delta)
 
-=======
-    return -np.sum(np.log(y[np.arange(batch_size), t]) + delta)
->>>>>>> origin/master
