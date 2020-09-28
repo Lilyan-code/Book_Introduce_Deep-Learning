@@ -3,6 +3,7 @@ try:
     import urllib.request
 except ImportError:
     raise ImportError('You should use Python 3.x')
+
 import os.path
 import gzip
 import pickle
@@ -62,7 +63,7 @@ def _load_img(file_name):
     
     return data
     
-def _convert_numpy(): # 将down下来的Data转换为NumPy
+def _convert_numpy(): # 将down下来的Data转换为NumPy数组形式
     dataset = {}
     dataset['train_img'] =  _load_img(key_file['train_img'])
     dataset['train_label'] = _load_label(key_file['train_label'])    
